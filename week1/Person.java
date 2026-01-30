@@ -42,7 +42,7 @@ public class Main {
 
         int ageLimit = sc.nextInt();
 
-        // 1️⃣ Sort alphabetically by name (method reference)
+        
         List<Person> sortedList = persons.stream()
                 .sorted(Comparator.comparing(Person::getName))
                 .collect(Collectors.toList());
@@ -50,16 +50,17 @@ public class Main {
         sortedList.forEach(p -> System.out.print(p.getName() + " "));
         System.out.println();
 
-        // 2️⃣ Filter persons older than ageLimit (static method reference)
+       
         persons.stream()
                 .filter(p -> isOlderThanLimit(p, ageLimit))
                 .forEach(p -> System.out.print(p.getName() + " "));
         System.out.println();
 
-        // 3️⃣ Convert all names to uppercase (instance method reference)
+      
         persons.stream()
                 .map(Person::getName)
                 .map(String::toUpperCase)
                 .forEach(name -> System.out.print(name + " "));
     }
+
 }
