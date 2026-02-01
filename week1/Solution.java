@@ -1,18 +1,18 @@
 import java.util.Scanner;
 
-// Functional Interface
+
 interface PerformOperation {
     boolean check(int n);
 }
 
 public class Solution {
 
-    // Returns true if number is odd
+  
     static PerformOperation isOdd() {
         return n -> n % 2 != 0;
     }
 
-    // Returns true if number is prime
+  
     static PerformOperation isPrime() {
         return n -> {
             if (n <= 1) return false;
@@ -23,7 +23,7 @@ public class Solution {
         };
     }
 
-    // Returns true if number is palindrome
+    
     static PerformOperation isPalindrome() {
         return n -> {
             int temp = n, rev = 0;
